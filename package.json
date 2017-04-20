@@ -3,6 +3,12 @@
   "version": "1.3.6",
   "description": "A starter kyt with React, Redux, SSR and data fetching.",
   "main": "index.js",
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --trailing-comma all --write \"src/**/*.js\"",
+      "git add"
+    ]
+  },
   "scripts": {
     "build": "kyt build --config kyt.config.production.js && sw-precache --config=sw-precache-config.js",
     "storybook": "start-storybook -p 6006 --dont-track",
@@ -31,13 +37,13 @@
       "sw-precache-config.js",
       ".storybook",
       "stories",
-      "kyt.config.production.js"
+      "kyt.config.production.js",
     ],
     "scripts": [
       "build",
       "storybook",
       "build-storybook",
-      "precommit"
+      "precommit",
     ]
   },
   "dependencies": {

@@ -1,16 +1,20 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "eslint-config-kyt"
+    "eslint-config-kyt",
+    "prettier",
+    "prettier/react"
   ],
 
   "env": {
   },
 
   "plugins": [
+    "prettier"
   ],
 
   "rules": {
+    "prettier/prettier": ["error", {"trailingComma": "all", "singleQuote": true}]
   },
 
   "globals": {
