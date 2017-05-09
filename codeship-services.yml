@@ -4,4 +4,4 @@ web:
     dockerfile_path: Dockerfile-production
   cached: true
   volumes:
-    - ./:/code
+    - .:/code/
