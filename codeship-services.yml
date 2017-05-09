@@ -2,6 +2,5 @@ web:
   build:
     image: web
     dockerfile_path: Dockerfile-production
-  cached: true
   volumes:
     - .:/code/
